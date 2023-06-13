@@ -1,15 +1,17 @@
 <template>
   <div>
-    <h2>Product details for {{ id }}</h2>
+    <ProductDetails :product="product" />
   </div>
 </template>
 
 <script setup>
-// /products/:id
-const { id } = useRoute().params;
 definePageMeta({
   layout: "products",
 });
+
+const { id } = useRoute().params;
+const url = "https://fakestoreapi.com/products/" + id;
+const { data: product } = await useFetch(url);
 </script>
 
 <style scoped></style>
