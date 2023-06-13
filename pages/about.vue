@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h2>About page</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
@@ -8,10 +7,13 @@
       velit placeat sint iste eaque neque? Natus cupiditate vero alias officia
       voluptates sed eum consectetur quam id.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/ninja?name=Mario");
+</script>
 
 <style scoped>
 h2 {
