@@ -12,7 +12,11 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/ninja?name=Mario");
+// const { data } = await useFetch("/api/ninja?name=Mario");
+const { data } = await useFetch("/api/ninja?name=Mario", {
+  mathod: "post",
+  body: { age: 21 },
+});
 </script>
 
 <style scoped>

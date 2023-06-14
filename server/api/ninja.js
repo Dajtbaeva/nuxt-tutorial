@@ -1,8 +1,11 @@
 export default defineEventHandler((event) => {
   const { name } = useQuery(event);
+
+  const {age} = await useBody();
+
   return {
-    message: `Helloooo, ${name}`,
+    message: `Helloooo, ${name}! You are ${age} age old `,
   };
 });
-// 12 - 5
-// Error: useQuery is not defined
+
+// Error: useQuery, useBody and defineEventHandler are not defined
