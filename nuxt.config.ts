@@ -14,5 +14,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  // buildModules: ["@nuxtjs/composition-api/module"],
+  runtimeConfig: {
+    currencyKey: process.env.CURRENCY_API_KEY,
+  },
 });

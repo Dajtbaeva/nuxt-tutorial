@@ -16,10 +16,12 @@
 // const { data } = await useFetch("/api/ninja?name=mario");
 
 // post method
-const { data } = await useFetch("/api/ninja?name=Mario", {
-  method: "post",
-  body: { age: 21 },
-});
+// const { data } = await useFetch("/api/ninja?name=Mario", {
+//     method: "post",
+//     body: { age: 21 },
+//   });
+
+const { data } = await useFetch("/api/currency/GBP");
 </script>
 
 <style scoped>
