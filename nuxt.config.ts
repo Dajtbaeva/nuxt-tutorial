@@ -14,4 +14,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // buildModules: ["@nuxtjs/composition-api/module"],
 });
